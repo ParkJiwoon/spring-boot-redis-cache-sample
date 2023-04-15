@@ -1,2 +1,3 @@
 # spring-boot-redis-cache-sample
-Spring Boot redis cache sample code
+
+내용 정리 [블로그](https://bcp0109.tistory.com/386)
