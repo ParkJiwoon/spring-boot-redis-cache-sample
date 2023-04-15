@@ -45,10 +45,10 @@ public class CacheConfig {
                                 .entryTtl(Duration.ofSeconds(120))
                                 .disableCachingNullValues()
                                 .serializeKeysWith(
-                                        RedisSerializationContext.SerializationPair.fromSerializer(RedisSerializer.string())
+                                        RedisSerializationContext.SerializationPair.fromSerializer(new StringRedisSerializer())
                                 )
                                 .serializeValuesWith(
-                                        RedisSerializationContext.SerializationPair.fromSerializer(RedisSerializer.json())
+                                        RedisSerializationContext.SerializationPair.fromSerializer(new GenericJackson2JsonRedisSerializer())
                                 ))
                 .withCacheConfiguration("cache2",
                         RedisCacheConfiguration.defaultCacheConfig()
